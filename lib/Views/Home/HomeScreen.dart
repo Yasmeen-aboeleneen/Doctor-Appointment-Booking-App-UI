@@ -1,4 +1,6 @@
 import 'package:doctor_appointment/Core/Constants/Colors.dart';
+import 'package:doctor_appointment/Views/Widgets/doctors_section.dart';
+import 'package:doctor_appointment/Views/Widgets/search-section.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -10,22 +12,27 @@ class Homescreen extends StatelessWidget {
     Icon(
       MdiIcons.eye,
       color: kVeryWhitheColor,
+      size: 27,
     ),
     Icon(
       MdiIcons.earHearing,
       color: kVeryWhitheColor,
+      size: 27,
     ),
     Icon(
       MdiIcons.brain,
       color: kVeryWhitheColor,
+      size: 27,
     ),
     Icon(
       MdiIcons.toothOutline,
       color: kVeryWhitheColor,
+      size: 27,
     ),
     Icon(
-      MdiIcons.heart,
+      MdiIcons.heartPlus,
       color: kVeryWhitheColor,
+      size: 27,
     ),
   ];
   @override
@@ -48,17 +55,17 @@ class Homescreen extends StatelessWidget {
                         bottomRight: Radius.circular(25))),
               ),
               Padding(
-                padding: const EdgeInsets.all(7),
+                padding: const EdgeInsets.all(6),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
+                   const Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 4),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Row(
+                            Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               CircleAvatar(
@@ -66,59 +73,100 @@ class Homescreen extends StatelessWidget {
                                 backgroundImage:
                                     AssetImage('Assets/Images/images.jpeg'),
                               ),
-                              const Icon(
+                               Icon(
                                 Icons.notifications_outlined,
                                 color: kVeryWhitheColor,
                                 size: 30,
                               ),
                             ],
                           ),
-                          const SizedBox(
+                            SizedBox(
                             height: 10,
                           ),
-                          const Text(
+                           Text(
                             "Hi , Ayla",
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
                                 color: kVeryWhitheColor),
                           ),
-                          const SizedBox(
+                            SizedBox(
                             height: 10,
                           ),
-                          const Text(
+                           Text(
                             "Your Health is our \nFirst Priority",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500,
                                 color: kVeryWhitheColor),
                           ),
-                          Container(
-                            height: H * .08,
-                            width: W,
-                            alignment: Alignment.center,
-                            margin: const EdgeInsets.only(top: 15, bottom: 20),
-                            decoration: BoxDecoration(
-                                color: kGreyColor,
-                                borderRadius: BorderRadius.circular(25)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextFormField(
-                                autocorrect: true,
-                                decoration: const InputDecoration(
-                                    border: InputBorder.none,
-                                    hintStyle: TextStyle(),
-                                    hintText: "Search here....",
-                                    suffixIcon: Icon(
-                                      Icons.search,
-                                      size: 27,
-                                    )),
-                              ),
-                            ),
-                          )
+                            SearchSection()
                         ],
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Text(
+                        'Categories',
+                        style: TextStyle(
+                            fontSize: W * .05,
+                            fontWeight: FontWeight.w500,
+                            color: kBlackColor),
+                      ),
+                    ),
+                    SizedBox(
+                      height: H * .01,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8, right: 8),
+                      child: Container(
+                        height: H * .2,
+                        width: W,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25)),
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: categories.length,
+                          itemBuilder: (context, index) {
+                            return Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 15, vertical: 15),
+                                  height: H * .08,
+                                  width: W * .18,
+                                  decoration: const BoxDecoration(
+                                      color: kGreyColor,
+                                      shape: BoxShape.circle),
+                                  child: Center(
+                                    child: categoriesIcons[index],
+                                  ),
+                                ),
+                                Text(
+                                  categories[index],
+                                  style: TextStyle(
+                                      color: kPurpleColor,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: W * .05),
+                                )
+                              ],
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15, bottom: 5),
+                      child: Text(
+                        'Doctors',
+                        style: TextStyle(
+                            color: kBlackColor,
+                            fontSize: W * .05,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    const DoctorsSection()
                   ],
                 ),
               )

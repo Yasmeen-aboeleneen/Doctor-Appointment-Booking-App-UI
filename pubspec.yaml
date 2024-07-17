@@ -60,6 +60,13 @@ flutter:
     - Assets\Images\doctors.png
     - Assets\Images\logo1.png
     - Assets\Images\images.jpeg
+    - Assets\Images\doctor1.jpg
+    - Assets\Images\doctor2.jpg
+    - Assets\Images\doctor3.jpg
+    - Assets\Images\doctor4.jpg
+    - Assets\Images\doctor5.jpg
+    - Assets\Images\doctor6.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

@@ -68,7 +68,7 @@ class Splashscreen extends StatelessWidget {
                       color: kPurpleColor),
                 )),
               ),
-            )
+            ),
           ],
         ),
       ),
