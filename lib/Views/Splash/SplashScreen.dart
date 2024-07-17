@@ -50,10 +50,8 @@ class Splashscreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const Homescreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Homescreen()));
               },
               child: Container(
                 height: 50,

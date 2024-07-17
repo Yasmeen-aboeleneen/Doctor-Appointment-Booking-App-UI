@@ -32,6 +32,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
+  material_design_icons_flutter: ^7.0.7296
 
 dev_dependencies:
 
@@ -58,6 +59,7 @@ flutter:
   assets:
     - Assets\Images\doctors.png
     - Assets\Images\logo1.png
+    - Assets\Images\images.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
