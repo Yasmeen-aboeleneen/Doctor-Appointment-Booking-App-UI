@@ -59,13 +59,13 @@ class Homescreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                   const Padding(
+                    const Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 4),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                            Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               CircleAvatar(
@@ -73,34 +73,34 @@ class Homescreen extends StatelessWidget {
                                 backgroundImage:
                                     AssetImage('Assets/Images/images.jpeg'),
                               ),
-                               Icon(
+                              Icon(
                                 Icons.notifications_outlined,
                                 color: kVeryWhitheColor,
                                 size: 30,
                               ),
                             ],
                           ),
-                            SizedBox(
+                          SizedBox(
                             height: 10,
                           ),
-                           Text(
+                          Text(
                             "Hi , Ayla",
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
                                 color: kVeryWhitheColor),
                           ),
-                            SizedBox(
+                          SizedBox(
                             height: 10,
                           ),
-                           Text(
+                          Text(
                             "Your Health is our \nFirst Priority",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500,
                                 color: kVeryWhitheColor),
                           ),
-                            SearchSection()
+                          SearchSection()
                         ],
                       ),
                     ),
