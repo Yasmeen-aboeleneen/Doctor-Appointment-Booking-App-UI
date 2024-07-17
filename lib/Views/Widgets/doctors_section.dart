@@ -1,4 +1,5 @@
 import 'package:doctor_appointment/Core/Constants/Colors.dart';
+import 'package:doctor_appointment/Views/Details/details_screen.dart';
 import 'package:flutter/material.dart';
 
 class DoctorsSection extends StatelessWidget {
@@ -33,7 +34,13 @@ class DoctorsSection extends StatelessWidget {
                     Stack(
                       children: [
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DetailsScreen()));
+                          },
                           child: ClipRRect(
                             borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(25),
